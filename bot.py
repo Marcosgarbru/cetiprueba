@@ -1,2 +1,2 @@
 def run():
-    print("HOLA CARACOLA CARACOLA")
+    print("HOLA CARACOLA")
