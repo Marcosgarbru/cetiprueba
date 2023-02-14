@@ -1,2 +1,2 @@
 def run():
-    print("pepe palote")
+    git add index.php
