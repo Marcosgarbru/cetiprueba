@@ -3,7 +3,7 @@ import os
 
 def run(file_path, repo_name, github_token):
     # Autenticación con el token de acceso
-    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 = Github(github_token)
+    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 = Github(github_token)
 
     # Obtener el repositorio
     cetiprueba = g.get_user().get_repo(repo_name)
