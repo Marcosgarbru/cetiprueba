@@ -1,2 +1,2 @@
-def run():
-    print("pepe palote")
+def run(): 
+    print("pepe palote")
