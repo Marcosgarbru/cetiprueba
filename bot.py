@@ -3,10 +3,10 @@ import os
 
 def run(file_path, repo_name, github_token):
     # Autenticación con el token de acceso
-    g = Github(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)
+    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 = Github(github_token)
 
     # Obtener el repositorio
-    repo = g.get_user().get_repo(cetiprueba)
+    cetiprueba = g.get_user().get_repo(repo_name)
 
     # Leer el contenido del archivo
     with open(file_path, 'r') as file:
