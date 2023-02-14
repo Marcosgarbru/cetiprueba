@@ -1,16 +1,16 @@
 from github import Github
-import os
-
-def run(file_path, repo_name, github_token):
+import os 
+ 
+def run(file_path, repo, token):
     # Autenticación con el token de acceso
-    token = Github(github_token)
+    token = Github(token)  
 
     # Obtener el repositorio
-    cetiprueba = g.get_user().get_repo(repo_name)
-
+    cetiprueba = g.get_user().get_repo(repo)    
+ 
     # Leer el contenido del archivo
     with open(file_path, 'r') as file:
-        content = file.read()
+        content = file.read()     
 
     # Crear el archivo en el repositorio
     try:
