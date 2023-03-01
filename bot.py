@@ -1,20 +1,27 @@
-from github import Github
-import os 
- 
-def run(file_path, repo, token):
-    # Autenticación con el token de acceso
-    token = Github(token)  
+# Import the requests module for send a PUT request
+import requests
+# Import the base64 module for encoding a file to base64
+import base64
 
-    # Obtener el repositorio
-    cetiprueba = g.get_user().get_repo(repo)    
- 
-    # Leer el contenido del archivo
-    with open(file_path, 'r') as file:
-        content = file.read()     
+githubAPIURL = "https://api.github.com/repos/bracketcounters/test-repo/contents/new-image.jpg"
+# Replace "bracketcounters" with your username, replace "test-repo" with your repository name and replace "new-image.png" with the filename you want to upload from local to GitHub.
 
-    # Crear el archivo en el repositorio
-    try:
-        repo.create_file(file_path, "Commit message", content)
-        print(f"El archivo {file_path} ha sido creado en el repositorio {repo_name}.")
-    except Exception as e:
-        print(f"Ha ocurrido un error al crear el archivo en el repositorio: {str(e)}")
+# Paste your API token here
+githubToken = "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"
+
+
+with open("my-local-image.jpg", "rb") as f:
+    # Encoding "my-local-image.jpg" to base64 format
+    encodedData = base64.b64encode(f.read())
+
+    headers = {
+        "Authorization": f'''Bearer {githubToken}''',
+        "Content-type": "application/vnd.github+json"
+    }
+    data = {
+        "message": "My commit message", # Put your commit message here.
+        "content": encodedData.decode("utf-8")
+    }
+
+    r = requests.put(githubAPIURL, headers=headers, json=data)
+    print(r.text) # Printing the response
