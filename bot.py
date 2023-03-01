@@ -3,6 +3,8 @@ import requests
 # Import the base64 module for encoding a file to base64
 import base64
 
+import main.py
+
 githubAPIURL = "https://api.github.com/repos/Marcosgarbru/cetiprueba/contents/123.txt"
 # Replace "bracketcounters" with your username, replace "test-repo" with your repository name and replace "new-image.png" with the filename you want to upload from local to GitHub.
 
