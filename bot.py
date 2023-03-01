@@ -7,7 +7,7 @@ githubAPIURL = "https://api.github.com/repos/bracketcounters/test-repo/contents/
 # Replace "bracketcounters" with your username, replace "test-repo" with your repository name and replace "new-image.png" with the filename you want to upload from local to GitHub.
 
 # Paste your API token here
-githubToken = "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"
+githubToken = "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"
 
 
 with open("my-local-image.jpg", "rb") as f:
