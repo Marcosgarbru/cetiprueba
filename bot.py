@@ -6,9 +6,6 @@ import base64
 githubAPIURL = "https://api.github.com/repos/Marcosgarbru/cetiprueba/contents/new-123.txt"
 # Replace "bracketcounters" with your username, replace "test-repo" with your repository name and replace "new-image.png" with the filename you want to upload from local to GitHub.
 
-# Paste your API token here
-githubToken = "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"
-
 
 with open("my-local-123.txt", "rb") as f:
     # Encoding "my-local-123.txt" to base64 format
