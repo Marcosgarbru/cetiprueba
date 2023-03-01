@@ -12,7 +12,7 @@ with open("123.txt", "rb") as f:
     encodedData = base64.b64encode(f.read())
 
     headers = {
-        "Authorization": f'''Bearer {Token}''',
+        "Authorization": f'''Bearer {token}''',
         "Content-type": "application/vnd.github+json"
     }
     data = {
